@@ -1,0 +1,193 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+    // background: #fff;
+    background: rgb(226, 83, 83);
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.portfolio-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -180px;
+    margin-top: -180px;
+    width: 360px;
+    height: 360px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 3px;
+    box-shadow: 5px 5px 10px rgb(78, 22, 22);
+    
+
+    
+    .left-panel {
+        position: relative;
+        float: left;
+        height: 360px;
+        width: 240px;
+
+        .image {
+            position: relative;
+            margin: 10px auto 10px auto;
+            height: 150px;
+            width: 150px;
+
+            $border-1-height : 140px;
+            $border-2-height : 130px;
+            $image-height: 120px;
+            $image-container-height: 150px;
+
+            .border-1 {
+                position: absolute;
+                box-sizing: border-box;
+                height: 140px;
+                width: 140px;
+                top: 5px;
+                left: 5px;
+                border-radius: 50%;
+                border-color: rgba(78, 22, 22, 1) 
+                                transparent
+                                rgba(78, 22, 22, 1) 
+                                rgba(78, 22, 22, 1);
+                // box-shadow: 0px 0px 10px rgba($color: rgb(78, 22, 22), $alpha: 0.2);
+                border-width: 1px;
+                border-style: solid;
+                transition: all 2s ease-in-out;
+            }
+
+            .border-2 {
+                position: absolute;
+                box-sizing: border-box;
+                height: 132px;
+                width: 132px;
+                top: 9px;
+                left: 9px;
+                border-radius: 50%;
+                border-color: rgba(78, 22, 22, 1) 
+                                rgba(78, 22, 22, 1) 
+                                rgba(78, 22, 22, 1) 
+                                transparent;
+                border-width: 1px;
+                border-style: solid;
+                transition: all 2s ease-in-out;
+            }
+
+            img {
+                position: absolute;
+                height: 120px;
+                width: 120px;
+                top: 16px;
+                left: 16px;
+                border-radius: 50%;
+                box-shadow: 0px 0px 20px rgba($color: rgb(78, 22, 22), $alpha: 0.1);
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                .border-1 {
+                    transform: rotate(360deg);
+                }
+
+                .border-2 {
+                    transform: rotate(-360deg);
+                }
+            }
+        }
+
+        .name {
+            font-size: 18px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .actions {
+            text-align: center;
+
+            button {
+                transition: all 0.5s ease-in-out;
+                font-size: 14px;
+                font-weight: 700;
+                outline: none;
+            }
+
+            .follow {
+                margin: 30px 0px 10px;
+                height: 30px;
+                width: 150px;
+                border: 1px solid rgba(78, 22, 22, 1);
+                border-radius: 15px;
+            }
+
+            .message {
+                height: 30px;
+                width: 150px;
+                border: 1px solid rgba(78, 22, 22, 1);
+                border-radius: 15px;
+            }
+
+            .follow:hover, .message:hover {
+                color: rgba(255, 255, 255, 1);
+                background: rgba(78, 22, 22, 1);
+            }
+        }
+    }
+
+    .right-panel {
+        position: relative;
+        float: left;
+        width: 120px;
+        height: 360px;
+        
+        .metric {
+            height: 120px;
+            width: 120px;
+            box-sizing: border-box;
+            padding-top: 40px;
+            background: rgb(230, 64, 64, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 1);
+            color: rgb(78, 22, 22);
+            transition: all 0.5s ease-in-out;
+
+            .count {
+                font-size: 18px;
+                font-weight: 700;
+                text-align: center;
+            }
+
+            .name {
+                font-size: 14px;
+                text-align: center;
+            }
+
+            &:nth-child(3) {
+                border-bottom: none;
+            }
+
+            &:hover {
+                background: rgb(230, 64, 64, 0.8);
+            }
+        }
+    }
+}
+

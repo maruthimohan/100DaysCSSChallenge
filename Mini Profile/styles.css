@@ -1,0 +1,154 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #e25353;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.portfolio-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -180px;
+  margin-top: -180px;
+  width: 360px;
+  height: 360px;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 5px 5px 10px #4e1616;
+}
+.portfolio-container .left-panel {
+  position: relative;
+  float: left;
+  height: 360px;
+  width: 240px;
+}
+.portfolio-container .left-panel .image {
+  position: relative;
+  margin: 10px auto 10px auto;
+  height: 150px;
+  width: 150px;
+}
+.portfolio-container .left-panel .image .border-1 {
+  position: absolute;
+  box-sizing: border-box;
+  height: 140px;
+  width: 140px;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
+  border-color: #4e1616 transparent #4e1616 #4e1616;
+  border-width: 1px;
+  border-style: solid;
+  transition: all 2s ease-in-out;
+}
+.portfolio-container .left-panel .image .border-2 {
+  position: absolute;
+  box-sizing: border-box;
+  height: 132px;
+  width: 132px;
+  top: 9px;
+  left: 9px;
+  border-radius: 50%;
+  border-color: #4e1616 #4e1616 #4e1616 transparent;
+  border-width: 1px;
+  border-style: solid;
+  transition: all 2s ease-in-out;
+}
+.portfolio-container .left-panel .image img {
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  top: 16px;
+  left: 16px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px rgba(78, 22, 22, 0.1);
+}
+.portfolio-container .left-panel .image:hover {
+  cursor: pointer;
+}
+.portfolio-container .left-panel .image:hover .border-1 {
+  transform: rotate(360deg);
+}
+.portfolio-container .left-panel .image:hover .border-2 {
+  transform: rotate(-360deg);
+}
+.portfolio-container .left-panel .name {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+.portfolio-container .left-panel .title {
+  text-align: center;
+}
+.portfolio-container .left-panel .actions {
+  text-align: center;
+}
+.portfolio-container .left-panel .actions button {
+  transition: all 0.5s ease-in-out;
+  font-size: 14px;
+  font-weight: 700;
+  outline: none;
+}
+.portfolio-container .left-panel .actions .follow {
+  margin: 30px 0px 10px;
+  height: 30px;
+  width: 150px;
+  border: 1px solid #4e1616;
+  border-radius: 15px;
+}
+.portfolio-container .left-panel .actions .message {
+  height: 30px;
+  width: 150px;
+  border: 1px solid #4e1616;
+  border-radius: 15px;
+}
+.portfolio-container .left-panel .actions .follow:hover, .portfolio-container .left-panel .actions .message:hover {
+  color: white;
+  background: #4e1616;
+}
+.portfolio-container .right-panel {
+  position: relative;
+  float: left;
+  width: 120px;
+  height: 360px;
+}
+.portfolio-container .right-panel .metric {
+  height: 120px;
+  width: 120px;
+  box-sizing: border-box;
+  padding-top: 40px;
+  background: rgba(230, 64, 64, 0.2);
+  border-bottom: 1px solid white;
+  color: #4e1616;
+  transition: all 0.5s ease-in-out;
+}
+.portfolio-container .right-panel .metric .count {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+.portfolio-container .right-panel .metric .name {
+  font-size: 14px;
+  text-align: center;
+}
+.portfolio-container .right-panel .metric:nth-child(3) {
+  border-bottom: none;
+}
+.portfolio-container .right-panel .metric:hover {
+  background: rgba(230, 64, 64, 0.8);
+}
+
+/*# sourceMappingURL=styles.css.map */

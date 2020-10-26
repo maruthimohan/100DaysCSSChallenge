@@ -1,0 +1,183 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 8px 0 rgba(0,0,0,0.5);
+	overflow: hidden;
+  background: rgb(35, 56, 134);
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.lines {
+	position: relative;
+	width: 100px;
+	height: 100px;
+    z-index: 2;
+    
+    &:hover {
+        cursor: pointer;
+    }
+	
+	.line-one,
+	.line-two,
+	.line-three {
+		position: absolute;
+		display: block;
+		z-index: 3;
+		width: 100%;
+		height: 10px;
+		border-radius: 5px;
+        // background: #fff;
+        background: rgb(10, 243, 146);
+        box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.6);
+    }
+    
+    &.animated {
+        .line-one {
+            animation: line-one-forward 1s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+
+        .line-two {
+            animation: line-two-forward 1s ease-in-out;
+            animation-fill-mode: forwards
+        }
+
+        .line-three {
+            animation: line-three-forward 1s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+    }
+	
+	.line-one {
+		animation: line-one-rev 1s ease-in-out;
+	}
+	
+	.line-two {
+		margin-top: 30px;
+		animation: line-two-rev 1s ease-in-out;
+	}
+	
+	.line-three {
+		margin-top: 60px;
+		animation: line-three-rev 1s ease-in-out;
+	}
+	
+}
+
+@keyframes line-one-forward {
+	0% {
+		transform: none;
+	}
+	
+	50% {
+        margin-top: 30px;
+        transform: rotate(0);
+	}
+	
+	100% {
+		margin-top: 30px;
+		transform: rotate(45deg);
+	}
+}
+
+@keyframes line-two-forward {
+	0% {
+		transform: none;
+	}
+	
+	50% {
+		opacity: 1;
+		transform: scale(0);
+	}
+	
+	100% {
+		opacity: 0;
+		transform: scale(0);
+	}
+}
+
+@keyframes line-three-forward {
+	0% {
+		transform: none;
+	}
+	
+	50% {
+        margin-top: 30px;
+        transform: rotate(0);
+	}
+	
+	100% {
+		margin-top: 30px;
+		transform: rotate(135deg);
+	}
+}
+
+@keyframes line-one-rev {
+	0% {
+		transform: rotate(45deg);
+		margin-top: 30px;
+	}
+	
+	50% {
+		transform: rotate(0deg);
+		margin-top: 30px;
+	}
+	
+	100% {
+		margin-top: 0px;
+	}
+}
+
+@keyframes line-two-rev {
+    0% {
+        opacity: 0;
+		transform: scale(0);
+    }
+    
+    50% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes line-three-rev {
+	0% {
+		transform: rotate(135deg);
+		margin-top: 30px;
+	}
+	
+	50% {
+		transform: rotate(0);
+		margin-top:30px;
+	}
+	
+	100% {
+		margin-top: 60px;
+	}
+}

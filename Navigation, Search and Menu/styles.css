@@ -1,0 +1,699 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #9bc5fd;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.panel.panel-animated {
+  animation: panel-slide-out 0.4s ease-out forwards;
+}
+
+.panel {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  top: 25px;
+  left: 25px;
+  overflow: auto;
+  z-index: 2;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  animation: panel-slide-in 0.4s ease-out forwards;
+}
+.panel .navigation {
+  position: relative;
+  background: rgba(1, 15, 136, 0.77);
+  color: rgba(187, 7, 106, 0.77);
+  height: 60px;
+  width: 100%;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.panel .navigation .navigation-button {
+  position: absolute;
+  left: 25px;
+  top: 22.5px;
+  height: 15px;
+  width: 35px;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+.panel .navigation .navigation-button .line-1, .panel .navigation .navigation-button .line-2, .panel .navigation .navigation-button .line-circle {
+  background: #9bc5fd;
+  transition: all 0.25s ease-in-out;
+}
+.panel .navigation .navigation-button .line-1 {
+  position: absolute;
+  top: 0px;
+  display: inline-block;
+  width: 25px;
+  height: 3px;
+  border-radius: 2px;
+}
+.panel .navigation .navigation-button .line-circle {
+  position: absolute;
+  top: -2px;
+  right: 0;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+.panel .navigation .navigation-button .line-2 {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 34px;
+  height: 3px;
+  margin-top: 4px;
+  border-radius: 2px;
+}
+.panel .navigation .navigation-button:hover, .panel .navigation .navigation-button:focus {
+  cursor: pointer;
+}
+.panel .navigation .navigation-button:hover .line-1, .panel .navigation .navigation-button:hover .line-2, .panel .navigation .navigation-button:hover .line-circle, .panel .navigation .navigation-button:focus .line-1, .panel .navigation .navigation-button:focus .line-2, .panel .navigation .navigation-button:focus .line-circle {
+  background: #d1e9f8;
+}
+.panel .navigation .navigation-text {
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  color: #e0f0fa;
+  line-height: 60px;
+}
+.panel .navigation .navigation-search {
+  position: absolute;
+  right: 60px;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
+  animation: input-slide-out 0.3s ease-in forwards;
+}
+.panel .navigation .navigation-search .input {
+  font-size: 14px;
+  margin-top: 15px;
+  margin-left: 20px;
+  height: 30px;
+  line-height: 30px;
+  width: 270px;
+  border: none;
+  outline: none;
+  color: rgba(1, 15, 136, 0.77);
+  background: white;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+.panel .navigation .navigation-search.active {
+  opacity: 1;
+  z-index: 3;
+  animation: input-slide-in 0.3s ease-out forwards;
+}
+.panel .navigation .navigation-search.no-animation {
+  animation: none;
+}
+.panel .navigation .navigation-search-button {
+  position: absolute;
+  top: 22.5px;
+  right: 20px;
+  height: 20px;
+  width: 20px;
+  font-size: 20px;
+  box-sizing: border-box;
+  color: #9bc5fd;
+  transition: color 0.25s ease-in-out;
+}
+.panel .navigation .navigation-search-button:hover {
+  color: #d1e9f8;
+  cursor: pointer;
+}
+.panel .feed {
+  position: relative;
+  height: 290px;
+  background: white;
+}
+.panel .feed .feed-line {
+  position: absolute;
+  margin-top: -10px;
+  height: 100%;
+  width: 3px;
+  left: 30px;
+  background: lightgray;
+}
+.panel .feed .feed-item {
+  margin: 10px 10px 10px 60px;
+}
+.panel .feed .feed-item:nth-child(2) {
+  animation: slide-in 0.5s ease-out 0.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(3) {
+  animation: slide-in 0.5s ease-out 0.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(4) {
+  animation: slide-in 0.5s ease-out 0.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(5) {
+  animation: slide-in 0.5s ease-out 1s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(6) {
+  animation: slide-in 0.5s ease-out 1.2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(7) {
+  animation: slide-in 0.5s ease-out 1.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(8) {
+  animation: slide-in 0.5s ease-out 1.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(9) {
+  animation: slide-in 0.5s ease-out 1.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(10) {
+  animation: slide-in 0.5s ease-out 2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(11) {
+  animation: slide-in 0.5s ease-out 2.2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(12) {
+  animation: slide-in 0.5s ease-out 2.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(13) {
+  animation: slide-in 0.5s ease-out 2.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(14) {
+  animation: slide-in 0.5s ease-out 2.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(15) {
+  animation: slide-in 0.5s ease-out 3s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(16) {
+  animation: slide-in 0.5s ease-out 3.2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(17) {
+  animation: slide-in 0.5s ease-out 3.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(18) {
+  animation: slide-in 0.5s ease-out 3.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(19) {
+  animation: slide-in 0.5s ease-out 3.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(20) {
+  animation: slide-in 0.5s ease-out 4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(21) {
+  animation: slide-in 0.5s ease-out 4.2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(22) {
+  animation: slide-in 0.5s ease-out 4.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(23) {
+  animation: slide-in 0.5s ease-out 4.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(24) {
+  animation: slide-in 0.5s ease-out 4.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(25) {
+  animation: slide-in 0.5s ease-out 5s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(26) {
+  animation: slide-in 0.5s ease-out 5.2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(27) {
+  animation: slide-in 0.5s ease-out 5.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(28) {
+  animation: slide-in 0.5s ease-out 5.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(29) {
+  animation: slide-in 0.5s ease-out 5.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(30) {
+  animation: slide-in 0.5s ease-out 6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(31) {
+  animation: slide-in 0.5s ease-out 6.2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(32) {
+  animation: slide-in 0.5s ease-out 6.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(33) {
+  animation: slide-in 0.5s ease-out 6.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(34) {
+  animation: slide-in 0.5s ease-out 6.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(35) {
+  animation: slide-in 0.5s ease-out 7s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(36) {
+  animation: slide-in 0.5s ease-out 7.2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(37) {
+  animation: slide-in 0.5s ease-out 7.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(38) {
+  animation: slide-in 0.5s ease-out 7.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(39) {
+  animation: slide-in 0.5s ease-out 7.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(40) {
+  animation: slide-in 0.5s ease-out 8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(41) {
+  animation: slide-in 0.5s ease-out 8.2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(42) {
+  animation: slide-in 0.5s ease-out 8.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(43) {
+  animation: slide-in 0.5s ease-out 8.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(44) {
+  animation: slide-in 0.5s ease-out 8.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(45) {
+  animation: slide-in 0.5s ease-out 9s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(46) {
+  animation: slide-in 0.5s ease-out 9.2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(47) {
+  animation: slide-in 0.5s ease-out 9.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(48) {
+  animation: slide-in 0.5s ease-out 9.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(49) {
+  animation: slide-in 0.5s ease-out 9.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(50) {
+  animation: slide-in 0.5s ease-out 10s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(51) {
+  animation: slide-in 0.5s ease-out 10.2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(52) {
+  animation: slide-in 0.5s ease-out 10.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(53) {
+  animation: slide-in 0.5s ease-out 10.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(54) {
+  animation: slide-in 0.5s ease-out 10.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(55) {
+  animation: slide-in 0.5s ease-out 11s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(56) {
+  animation: slide-in 0.5s ease-out 11.2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(57) {
+  animation: slide-in 0.5s ease-out 11.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(58) {
+  animation: slide-in 0.5s ease-out 11.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(59) {
+  animation: slide-in 0.5s ease-out 11.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(60) {
+  animation: slide-in 0.5s ease-out 12s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(61) {
+  animation: slide-in 0.5s ease-out 12.2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(62) {
+  animation: slide-in 0.5s ease-out 12.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(63) {
+  animation: slide-in 0.5s ease-out 12.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(64) {
+  animation: slide-in 0.5s ease-out 12.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(65) {
+  animation: slide-in 0.5s ease-out 13s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(66) {
+  animation: slide-in 0.5s ease-out 13.2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(67) {
+  animation: slide-in 0.5s ease-out 13.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(68) {
+  animation: slide-in 0.5s ease-out 13.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(69) {
+  animation: slide-in 0.5s ease-out 13.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(70) {
+  animation: slide-in 0.5s ease-out 14s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(71) {
+  animation: slide-in 0.5s ease-out 14.2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(72) {
+  animation: slide-in 0.5s ease-out 14.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(73) {
+  animation: slide-in 0.5s ease-out 14.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(74) {
+  animation: slide-in 0.5s ease-out 14.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(75) {
+  animation: slide-in 0.5s ease-out 15s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(76) {
+  animation: slide-in 0.5s ease-out 15.2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(77) {
+  animation: slide-in 0.5s ease-out 15.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(78) {
+  animation: slide-in 0.5s ease-out 15.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(79) {
+  animation: slide-in 0.5s ease-out 15.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(80) {
+  animation: slide-in 0.5s ease-out 16s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(81) {
+  animation: slide-in 0.5s ease-out 16.2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(82) {
+  animation: slide-in 0.5s ease-out 16.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(83) {
+  animation: slide-in 0.5s ease-out 16.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(84) {
+  animation: slide-in 0.5s ease-out 16.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(85) {
+  animation: slide-in 0.5s ease-out 17s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(86) {
+  animation: slide-in 0.5s ease-out 17.2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(87) {
+  animation: slide-in 0.5s ease-out 17.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(88) {
+  animation: slide-in 0.5s ease-out 17.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(89) {
+  animation: slide-in 0.5s ease-out 17.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(90) {
+  animation: slide-in 0.5s ease-out 18s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(91) {
+  animation: slide-in 0.5s ease-out 18.2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(92) {
+  animation: slide-in 0.5s ease-out 18.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(93) {
+  animation: slide-in 0.5s ease-out 18.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(94) {
+  animation: slide-in 0.5s ease-out 18.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(95) {
+  animation: slide-in 0.5s ease-out 19s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(96) {
+  animation: slide-in 0.5s ease-out 19.2s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(97) {
+  animation: slide-in 0.5s ease-out 19.4s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(98) {
+  animation: slide-in 0.5s ease-out 19.6s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(99) {
+  animation: slide-in 0.5s ease-out 19.8s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item:nth-child(100) {
+  animation: slide-in 0.5s ease-out 20s;
+  animation-fill-mode: both;
+}
+.panel .feed .feed-item .feed-item-circle {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  margin-left: -36px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid rgba(1, 15, 136, 0.77);
+  box-shadow: 0px 0px 0px 3px white;
+}
+.panel .feed .feed-item .feed-item-time {
+  position: relative;
+  top: 3px;
+  display: block;
+  font-size: 12px;
+}
+.panel .feed .feed-item .feed-item-text {
+  margin-top: 5px;
+  display: block;
+  font-size: 14px;
+}
+.panel .feed .feed-item .feed-item-text .name {
+  font-weight: 600;
+}
+
+.no-animation {
+  animation: none;
+}
+
+.menu-panel {
+  position: absolute;
+  height: 300px;
+  width: 170px;
+  left: 25px;
+  top: 50px;
+  z-index: 0;
+  opacity: 0;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background: #3d4ba7;
+  animation: menu-panel-in 0.5s ease-out forwards;
+}
+.menu-panel.active {
+  animation: menu-panel-out 0.5s ease-out forwards;
+}
+.menu-panel.no-animation {
+  animation: none;
+}
+.menu-panel ul {
+  position: relative;
+  margin: auto 0px;
+  padding: 0;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+  color: #9bc5fd;
+  list-style-type: none;
+  transition: all 0.25s ease-in-out;
+}
+.menu-panel ul li {
+  line-height: 55px;
+  font-size: 14px;
+  padding-left: 20px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+.menu-panel ul li:hover {
+  background: #27306d;
+  color: #d1e9f8;
+}
+.menu-panel ul li .action-name {
+  padding-left: 5px;
+}
+
+@keyframes input-slide-in {
+  0% {
+    transform: translateX(25px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes input-slide-out {
+  0% {
+    opacity: 1;
+    z-index: 3;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+    transform: translateX(25px);
+  }
+}
+@keyframes menu-panel-out {
+  0% {
+    opacity: 1;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes menu-panel-in {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(30px);
+  }
+}
+@keyframes panel-slide-out {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translateX(170px);
+  }
+}
+@keyframes panel-slide-in {
+  0% {
+    transform: translateX(170px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes slide-in {
+  0% {
+    transform: translate3d(0, 40px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
